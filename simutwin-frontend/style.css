@@ -1,0 +1,23 @@
+body { font-family: sans-serif; margin: 0; overflow: hidden; }
+#app-container { display: flex; height: 100vh; }
+#toolbox { width: 200px; padding: 15px; background-color: #f4f4f4; border-right: 1px solid #ddd; flex-shrink: 0; }
+.toolbox-btn { display: block; width: 100%; padding: 10px; margin-bottom: 10px; font-size: 16px; cursor: pointer; }
+#canvas-container { flex-grow: 1; display: flex; position: relative; }
+.canvas-container, #factory-canvas { width: 100%; height: 100%; }
+#dashboard { width: 250px; padding: 15px; background-color: #f4f4f4; border-left: 1px solid #ddd; flex-shrink: 0; }
+.controls-container { display: flex; gap: 10px; }
+.control-btn { flex-grow: 1; padding: 12px; font-size: 16px; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.2s; }
+.control-btn.run { background-color: #28a745; }
+.control-btn.run:hover { background-color: #218838; }
+.control-btn.reset { background-color: #dc3545; }
+.control-btn.reset:hover { background-color: #c82333; }
+
+/* Styles for the inspector panel */
+#inspector-panel .form-group { margin-top: 10px; }
+#inspector-panel label { display: block; margin-bottom: 5px; font-size: 14px; color: #555; }
+/* Style both input and textarea the same way */
+#inspector-panel input, #inspector-panel textarea {
+    width: 100%; padding: 8px; box-sizing: border-box;
+    border: 1px solid #ccc; border-radius: 4px; font-family: sans-serif;
+}
+.hidden { display: none; }

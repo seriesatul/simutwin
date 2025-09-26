@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimuTwin - Your Factory, On Your Laptop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="app-container">
+        <!-- Panel 1: The Toolbox -->
+        <div id="toolbox">
+            <h2>Toolbox</h2>
+            <button id="add-machine-btn" class="toolbox-btn">Add Machine</button>
+            <button id="add-conveyor-btn" class="toolbox-btn">Add Conveyor</button>
+        </div>
+
+        <!-- Panel 2: The Main Canvas -->
+        <div id="canvas-container">
+            <canvas id="factory-canvas"></canvas>
+        </div>
+        
+        <div id="dashboard">
+            <h2>Dashboard</h2>
+            <div class="controls-container">
+                <button id="run-btn" class="control-btn run">Run</button>
+                <button id="reset-btn" class="control-btn reset">Reset</button>
+            </div>
+            <hr>
+            <h3>Live Data</h3>
+            <p>Products Completed: <span id="products-completed">0</span></p>
+            <p>Status: <span id="sim-status">Idle</span></p>
+
+            <hr>
+            <!-- THIS SECTION IS UPDATED WITH NEW FIELDS -->
+            <div id="inspector-panel" class="hidden">
+                <h3 id="inspector-title">Properties</h3>
+                <div class="form-group">
+                    <label for="name-input">Name:</label>
+                    <input type="text" id="name-input">
+                </div>
+                <div class="form-group">
+                    <label for="description-input">Description (for AI):</label>
+                    <textarea id="description-input" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="processing-time-input">Processing Time (s):</label>
+                    <input type="number" id="processing-time-input" value="5">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
